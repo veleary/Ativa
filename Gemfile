@@ -44,6 +44,7 @@ gem 'carrierwave'
 gem 'rmagick'
 
 gem 'figaro' 
+gem 'fog'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
