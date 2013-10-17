@@ -5,12 +5,12 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @project = Project.new
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
-
     if params[:phase]
       @show_phase = Phase.find_by_name(params[:phase])
     else
