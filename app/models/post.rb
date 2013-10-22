@@ -7,8 +7,10 @@ class Post < ActiveRecord::Base
 
   mount_uploader :attachment, ImageUploader
 
-  def snippet(length)
-    message.truncate length
+
+  def snippet( options = {} )
+    options[:length] = options[:length] || 300
+    message.truncate options [:length]
   end
 
   private
